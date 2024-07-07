@@ -1,13 +1,10 @@
-import { useContext } from "react";
-
-import { ThemeContext } from "../context/theme/ThemeContext";
 import DarkLight from "../switches/dark-light";
 
 import "./_header.scss";
+import { useColorMode } from "@chakra-ui/react";
 
 const Header = () => {
-  const state = useContext(ThemeContext);
-  console.log(state);
+  const { colorMode } = useColorMode();
 
   window.addEventListener("scroll", () => {
     const nav = document.querySelector("ul");
@@ -16,9 +13,14 @@ const Header = () => {
   });
 
   return (
-    <div className="nav">
-      <div className="container">
-        <ul className="nav__list">
+    <div className="container">
+      <div className="nav">
+        <ul
+          className={`nav__list ${
+            colorMode === "dark" ? "header-dark-bg" : ""
+          }`}
+          style={{ width: "100%" }}
+        >
           <li className="nav__item">
             <a href="#home" className="nav__link">
               Home
@@ -34,7 +36,7 @@ const Header = () => {
               Service
             </a>
           </li>
-          <li className="nav__item">
+          <li style={{ margin: "0 70px" }} className="nav__item">
             <div className="nav__link">
               <DarkLight />
             </div>

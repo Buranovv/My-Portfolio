@@ -6,6 +6,8 @@
   //   border-radius: 60px;
   //   background: #fd853a;
   // }
+  transition: background 0.5s linear;
+  animation: theme linear;
   .container {
     display: flex;
     align-items: center;
@@ -23,6 +25,8 @@
     background: #000;
 
     transition: border-radius 0.2s linear;
+    transition: background 0.5s linear;
+    animation: theme linear;
   }
 
   &__link {
@@ -43,5 +47,26 @@
     top: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+.nav-dark {
+  background: #000;
+}
+
+@keyframes theme {
+  0% {
+    background: #000;
+  }
+  25% {
+    background: #333;
+  }
+  50% {
+    background: #555;
+  }
+  75% {
+    background: #777;
+  }
+  100% {
+    background: #fff;
   }
 }

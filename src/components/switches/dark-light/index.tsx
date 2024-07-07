@@ -1,25 +1,16 @@
-// import { useState } from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/theme/ThemeContext";
-import { THEME } from "../../../constants";
-
 import "./_style.scss";
+import { useColorMode } from "@chakra-ui/react";
 
 const DarkLight = () => {
-  const { setTheme } = useContext(ThemeContext);
-
-  const changeMode = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTheme(e.target.checked);
-
-    localStorage.setItem(THEME, e.target.checked.toString());
-  };
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <label className="theme-switch">
       <input
         type="checkbox"
         className="theme-switch__checkbox"
-        onChange={changeMode}
+        onChange={toggleColorMode}
+        checked={colorMode === "light" ? true : false}
       />
       <div className="theme-switch__container">
         <div className="theme-switch__clouds"></div>

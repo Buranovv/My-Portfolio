@@ -5,48 +5,40 @@
   font-style: normal;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
+// *,
+// *::after,
+// *::before {
+//   box-sizing: border-box;
+// }
 
-a {
-  text-decoration: none;
-  display: block;
-}
-li {
-  list-style: none;
-}
+// a {
+//   text-decoration: none;
+//   display: block;
+// }
+// li {
+//   list-style: none;
+// }
 
 // .dark {
-//   &__heading{
-//     color: #000;
+//   .header-dark-bg {
+//     background: #fff;
+//     .nav__link {
+//       color: #000;
+//     }
 //   }
-//   &__text {
-//   }
-//   &__text1 {
-//   }
-//   &__background {
-//   }
-// }
-// .light {
-//   &__heading {
-//     color: #fff;
-//   }
-//   &__text {
-//   }
-//   &__text1 {
-//   }
-//   &__background {
-//   }
+
+//   // color: #fff;
+//   // text {
+//   // }
+//   // text1 {
+//   // }
 // }
 
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-}
+// .container {
+//   max-width: 1300px;
+//   margin: 0 auto;
+// }
